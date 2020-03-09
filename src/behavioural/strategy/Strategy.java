@@ -27,19 +27,19 @@ public class Strategy {
     }
 }
 
-class ImageStorage {
-    public void store(String filename, Compressor compressor, Filter filter) {
-        compressor.compress(filename);
-        filter.apply(filename);
-    }
-}
-
 interface Compressor {
     void compress(String filename);
 }
 
 interface Filter {
     void apply(String filename);
+}
+
+class ImageStorage {
+    public void store(String filename, Compressor compressor, Filter filter) {
+        compressor.compress(filename);
+        filter.apply(filename);
+    }
 }
 
 class BlackAndWhite implements Filter {

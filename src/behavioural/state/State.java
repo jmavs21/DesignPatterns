@@ -24,8 +24,7 @@ package behavioural.state;
  */
 public class State {
     public static void main(String[] args) {
-        Canvas canvas = new Canvas();
-        canvas.setCurrentTool(new Selection());
+        Canvas canvas = new Canvas(new Selection());
         canvas.mouseDown();
         canvas.mouseUp();
         canvas.setCurrentTool(new Brush());
@@ -34,8 +33,14 @@ public class State {
     }
 }
 
+interface Tool {
+    void mouseDown();
+    void mouseUp();
+}
+
 class Canvas {
     private Tool currentTool;
+    public Canvas(Tool tool) { currentTool = tool; }
     public void mouseDown() {
         currentTool.mouseDown();
     }
@@ -70,9 +75,4 @@ class Brush implements Tool {
     public void mouseUp() {
         System.out.println("Draw a line");
     }
-}
-
-interface Tool {
-    void mouseDown();
-    void mouseUp();
 }

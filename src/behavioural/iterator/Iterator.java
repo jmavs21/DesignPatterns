@@ -44,6 +44,12 @@ public class Iterator {
     }
 }
 
+interface IIterator {
+    boolean hasNext();
+    String current();
+    void next();
+}
+
 class BrowseHistory {
     private static class Node {
         private String url;
@@ -82,10 +88,4 @@ class BrowseHistory {
             head = head.next;
         }
     }
-}
-
-interface IIterator {
-    boolean hasNext();
-    String current();
-    void next();
 }

@@ -16,7 +16,7 @@ import java.util.Deque;
  *      content:String
  *
  *  History / Caretaker
- *      states:list
+ *      states:stack
  *      push(state)
  *      pop()
  *
