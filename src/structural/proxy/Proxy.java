@@ -36,7 +36,7 @@ public class Proxy {
         Library library = new Library();
         String[] fileNames = {"a", "b", "c"};
         for(String fileName : fileNames)
-            library.add(new ProxyEbook(fileName)); // ProxyEbook
+            library.add(new ProxyEbook(fileName));
         library.openEbook("a");
     }
 }

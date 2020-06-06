@@ -28,12 +28,12 @@ public class Mediator {
 }
 
 abstract class DialogBox {
-    public abstract void changed(UIControl control);
+    public abstract void changed(UIControl_ control);
 }
 
 class ArticlesDialogBox extends DialogBox {
     private ListBox listBox = new ListBox(this);
-    private TextBox textBox = new TextBox(this);
+    private TextBox_ textBox = new TextBox_(this);
     private Button button = new Button(this);
     public void simulateUserInteraction() {
         listBox.setSelection("Article 1");
@@ -43,7 +43,7 @@ class ArticlesDialogBox extends DialogBox {
         System.out.println("Button: " + button.isEnabled());
     }
     @Override
-    public void changed(UIControl control) {
+    public void changed(UIControl_ control) {
         if(control == listBox) listBoxSelected();
         else if(control == textBox) textBoxChanged();
     }
@@ -58,14 +58,14 @@ class ArticlesDialogBox extends DialogBox {
     }
 }
 
-class UIControl {
+class UIControl_ {
     protected DialogBox owner;
-    public UIControl(DialogBox owner) {
+    public UIControl_(DialogBox owner) {
         this.owner = owner;
     }
 }
 
-class ListBox extends UIControl {
+class ListBox extends UIControl_ {
     private String selection;
     public ListBox(DialogBox owner) {
         super(owner);
@@ -79,9 +79,9 @@ class ListBox extends UIControl {
     }
 }
 
-class TextBox extends UIControl {
+class TextBox_ extends UIControl_ {
     private String content;
-    public TextBox(DialogBox owner) {
+    public TextBox_(DialogBox owner) {
         super(owner);
     }
     public String getContent() {
@@ -93,7 +93,7 @@ class TextBox extends UIControl {
     }
 }
 
-class Button extends UIControl {
+class Button extends UIControl_ {
     private boolean isEnabled;
     public Button(DialogBox owner) {
         super(owner);

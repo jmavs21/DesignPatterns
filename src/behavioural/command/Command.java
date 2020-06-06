@@ -1,7 +1,7 @@
 package behavioural.command;
 
 /**
- * Command Pattern: solves the problem of different commands/actions for same type of objects.
+ * Command Pattern: solves the problem of different commands/actions for same object.
  * Invoker and Receiver can communicate while been also decouple. Commands can be put into a queue, undone and persisted.
  *
  * Classes:

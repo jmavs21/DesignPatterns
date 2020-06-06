@@ -44,6 +44,10 @@ public class Observer {
     }
 }
 
+interface IObserver {
+    void update();
+}
+
 class Subject {
     private List<IObserver> observers = new ArrayList<>();
     public void addObserver(IObserver observer) { observers.add(observer); }
@@ -66,10 +70,6 @@ class DataSource extends Subject {
         // notifyObservers(value); // Push style
         notifyObservers();
     }
-}
-
-interface IObserver {
-    void update();
 }
 
 class SpreadSheet implements IObserver {
