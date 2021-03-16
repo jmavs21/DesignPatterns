@@ -18,6 +18,9 @@ package behavioural.templateMethod;
  * Relationships:
  *  Task has a execute() that does the auditTrail.record() and then calls doExecute() which are implemented by child classes.
  *  TransferMoney and GenerateReport extends Task and overrides the protected doExecute()
+ *  
+ * Note: you can also pass a 'function object' to constructor or static factory method instead of using inheritance, 
+ * 	i.e. protected boolean removeEldest...
  */
 public class TemplateMethod {
     public static void main(String[] args) {

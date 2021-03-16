@@ -30,8 +30,8 @@
  *  ·Visitor: Allows adding new operations to an object structure without modifying it.
  * Structural DP:
  *  ·Composite: Represents object hierarchies where individual objects and compositions of objects are treated the same way.
- *  ·Adapter: Allows converting the interface of a class into another interface that clients expect.
- *  ·Decorator: Adds additional behavior to an object dynamically.
+ *  ·Adapter: Allows converting the interface of a class into another interface that clients expect, i.e. or if contents are int[] to adapt to List<Integer>.
+ *  ·Decorator: Adds additional behavior to an object dynamically, i.e. using composition (passing the instance of type to forwarding and add on this class only additional functionality) and forwarding (Forward is a class that implements the interface type and forwards call to its methods).
  *  ·Facade: Provides a simplified, higher-level interface to a subsystem. Clients can talk to the facade rather than individual classes in the subsystem.
  *  ·Flyweight: Allows sharing common state between multiple objects.
  *  ·Bridge: Allows representing hierarchies that grow in two different dimensions independently.

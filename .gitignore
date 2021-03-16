@@ -1,4 +1,4 @@
 .idea/
 out/
 DesignPatterns.iml
-*.DS_Store
+.DS_Store
